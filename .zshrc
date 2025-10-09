@@ -32,6 +32,10 @@ alias gs='git status'
 alias gb='git branch'
 alias gd='git diff'
 
+alias tns='tmux new-session -s'
+alias tls='tmux ls'
+alias tat='tmux a -t'
+
 # enable vim bindings in zsh 
 bindkey -v '^?' backward-delete-char
 
