@@ -13,9 +13,16 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'preservim/nerdtree'
 Plugin 'junegunn/fzf.vim'
 Plugin 'junegunn/fzf'
+Plugin 'lifepillar/vim-solarized8'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+" Configure Solarized
+set termguicolors
+set background=dark          " or 'light'
+colorscheme solarized8_high
+
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
