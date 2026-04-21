@@ -19,6 +19,8 @@ fi
 # do sym links
 ln -sf $HOME/dotfiles/.zshrc $HOME/.zshrc
 ln -sf $HOME/dotfiles/.vimrc $HOME/.vimrc
+ln -sf $HOME/dotfiles/.inputrc $HOME/.inputrc
+ln -sf $HOME/dotfiles/.editrc $HOME/.editrc
 ln -sf $HOME/dotfiles/.nonplugin_vimrc $HOME/.nonplugin_vimrc
 ln -sf $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
 
