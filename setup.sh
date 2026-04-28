@@ -1,4 +1,4 @@
-#!/usr/bash
+#!/usr/bin/env bash
 
 # Check if zsh is available in the system PATH
 if ! command -v zsh &> /dev/null; then
@@ -44,5 +44,5 @@ ln -sf $HOME/dotfiles/.editrc $HOME/.editrc
 ln -sf $HOME/dotfiles/.nonplugin_vimrc $HOME/.nonplugin_vimrc
 ln -sf $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
 
-# do sourcing
-source ~/.zshrc
+# switch to zsh
+exec zsh
