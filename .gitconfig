@@ -1,0 +1,8 @@
+[alias]
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
+[user]
+    name = Andy Tso
+    email = andytso611@gmail.com
+[credential]
+    helper = manager
+
