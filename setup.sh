@@ -1,14 +1,20 @@
 #!/usr/bin/env bash
 
+if [ "$(id -u)" -eq 0 ]; then
+    SUDO=""
+else
+    SUDO="sudo"
+fi
+
 # Check if zsh is available in the system PATH
 if ! command -v zsh &> /dev/null; then
     echo "Zsh not found. Proceeding with installation..."
 
     # OS detection and installation
     if [ -f /etc/debian_version ]; then
-        sudo apt update && sudo apt install -y zsh
+        $SUDO apt update && $SUDO apt install -y zsh
     elif [ -f /etc/redhat-release ]; then
-        sudo dnf install -y zsh
+        $SUDO dnf install -y zsh
     elif [[ "$OSTYPE" == "darwin"* ]]; then
         brew install zsh
     else
