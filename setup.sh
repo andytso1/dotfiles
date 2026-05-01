@@ -25,6 +25,31 @@ else
     echo "Zsh is already installed: $(zsh --version)"
 fi
 
+# Check if GitHub CLI is available in the system PATH
+if ! command -v gh &> /dev/null; then
+    echo "GitHub CLI not found. Proceeding with installation..."
+
+    if [ -f /etc/debian_version ]; then
+        $SUDO apt update && $SUDO apt install -y gh
+    elif [ -f /etc/redhat-release ]; then
+        $SUDO dnf install -y gh
+    elif [[ "$OSTYPE" == "darwin"* ]]; then
+        brew install gh
+    else
+        echo "Unsupported OS. Please install GitHub CLI manually."
+    fi
+else
+    echo "GitHub CLI is already installed: $(gh --version | head -n 1)"
+fi
+
+if command -v gh &> /dev/null; then
+    if ! gh auth status &> /dev/null; then
+        gh auth login
+    fi
+
+    gh auth setup-git
+fi
+
 # clone dependencies
 DIR=$HOME/zsh-syntax-highlighting
 if test -d "$DIR"; then

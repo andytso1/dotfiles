@@ -3,6 +3,6 @@
 [user]
     name = Andy Tso
     email = andytso611@gmail.com
-[credential]
-    helper = manager
-
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
