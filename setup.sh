@@ -78,5 +78,9 @@ ln -sf $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
 ln -sf $HOME/dotfiles/.nonplugin_vimrc $HOME/.nonplugin_vimrc
 ln -sf $HOME/dotfiles/.gitconfig $HOME/.gitconfig
 
+ln -sf $HOME/dotfiles/cursor/keybindings.json "$HOME/Library/Application Support/Cursor/User/keybindings.json"
+ln -sf $HOME/dotfiles/cursor/settings.json    "$HOME/Library/Application Support/Cursor/User/settings.json"
+
+
 # switch to zsh
 exec zsh
