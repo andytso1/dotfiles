@@ -78,9 +78,16 @@ ln -sf $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
 ln -sf $HOME/dotfiles/.nonplugin_vimrc $HOME/.nonplugin_vimrc
 ln -sf $HOME/dotfiles/.gitconfig $HOME/.gitconfig
 
-ln -sf $HOME/dotfiles/cursor/keybindings.json "$HOME/Library/Application Support/Cursor/User/keybindings.json"
-ln -sf $HOME/dotfiles/cursor/settings.json    "$HOME/Library/Application Support/Cursor/User/settings.json"
 
+# Cursor user settings (desktop only; only meaningful on the GUI machine)
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    CURSOR_USER="$HOME/Library/Application Support/Cursor/User"
+    if [ -d "$CURSOR_USER" ]; then
+        mkdir -p "$CURSOR_USER"
+        ln -sf "$HOME/dotfiles/cursor/keybindings.json" "$CURSOR_USER/keybindings.json"
+        ln -sf "$HOME/dotfiles/cursor/settings.json"    "$CURSOR_USER/settings.json"
+    fi
+fi
 
 # switch to zsh
 exec zsh
