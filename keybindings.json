@@ -1,0 +1,75 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "shift+alt+k",
+        "command": "workbench.action.moveEditorToAboveGroup"
+    },
+    {
+        "key": "shift+alt+j",
+        "command": "workbench.action.moveEditorToBelowGroup"
+    },
+    {
+        "key": "shift+alt+h",
+        "command": "workbench.action.moveEditorToLeftGroup"
+    },
+    {
+        "key": "shift+alt+l",
+        "command": "workbench.action.moveEditorToRightGroup"
+    },
+    {
+        "key": "alt+h",
+        "command": "workbench.action.focusLeftGroup"
+    },
+    {
+        "key": "cmd+r cmd+left",
+        "command": "-workbench.action.focusLeftGroup"
+    },
+    {
+        "key": "alt+l",
+        "command": "workbench.action.focusRightGroup"
+    },
+    {
+        "key": "cmd+r cmd+right",
+        "command": "-workbench.action.focusRightGroup"
+    },
+    {
+        "key": "alt+j",
+        "command": "workbench.action.focusBelowGroup"
+    },
+    {
+        "key": "cmd+r cmd+down",
+        "command": "-workbench.action.focusBelowGroup"
+    },
+    {
+        "key": "alt+k",
+        "command": "workbench.action.focusAboveGroup"
+    },
+    {
+        "key": "cmd+r cmd+up",
+        "command": "-workbench.action.focusAboveGroup"
+    },
+    {
+        "key": "ctrl+alt+cmd+l",
+        "command": "workbench.action.positionPanelRight"
+    },
+    {
+        "key": "ctrl+alt+cmd+h",
+        "command": "workbench.action.positionPanelLeft"
+    },
+    {
+        "key": "ctrl+alt+cmd+j",
+        "command": "workbench.action.positionPanelBottom"
+    },
+    {
+        "key": "ctrl+alt+cmd+k",
+        "command": "workbench.action.positionPanelTop"
+    },
+    { "key": "alt+h", "command": "workbench.action.terminal.sendSequence",
+      "args": { "text": "\u001bh" }, "when": "terminalFocus" },
+    { "key": "alt+j", "command": "workbench.action.terminal.sendSequence",
+      "args": { "text": "\u001bj" }, "when": "terminalFocus" },
+    { "key": "alt+k", "command": "workbench.action.terminal.sendSequence",
+      "args": { "text": "\u001bk" }, "when": "terminalFocus" },
+    { "key": "alt+l", "command": "workbench.action.terminal.sendSequence",
+      "args": { "text": "\u001bl" }, "when": "terminalFocus" }
+]

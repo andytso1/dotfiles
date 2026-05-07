@@ -1,0 +1,14 @@
+{
+    "window.commandCenter": true,
+    "vim.smartRelativeLine": true,
+    "editor.lineNumbers": "relative",
+    "workbench.editorAssociations": {
+        "*.pdf": "default"
+    },
+    "remote.SSH.remotePlatform": {
+        "runpod": "linux",
+        "runpod.new": "linux",
+        "runpod.new3": "linux"
+    },
+    "remote.autoForwardPortsSource": "hybrid"
+}
