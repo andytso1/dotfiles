@@ -2,7 +2,7 @@
 # bootstrap.sh - one-shot setup for a fresh GPU box.
 #
 # Usage (on a brand-new machine):
-#   curl -LsSf https://raw.githubusercontent.com/andytso1/dotfiles/main/bootstrap.sh | bash
+#   curl -LsSf https://raw.githubusercontent.com/andytso1/dotfiles/master/bootstrap.sh | bash
 # or, if you've already cloned the dotfiles repo:
 #   ~/dotfiles/bootstrap.sh
 #
