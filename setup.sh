@@ -65,6 +65,14 @@ else
     git clone https://github.com/romkatv/powerlevel10k.git $DIR
 fi
 
+DIR=$HOME/.vim/bundle/Vundle.vim
+if test -d "$DIR"; then
+    echo "$DIR exists - skipping clone"
+else
+    mkdir -p "$HOME/.vim/bundle"
+    git clone https://github.com/VundleVim/Vundle.vim.git "$DIR"
+fi
+
 
 # do sym links
 ln -sf $HOME/dotfiles/.zshrc $HOME/.zshrc
@@ -77,6 +85,12 @@ ln -sf $HOME/dotfiles/.editrc $HOME/.editrc
 ln -sf $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
 ln -sf $HOME/dotfiles/.nonplugin_vimrc $HOME/.nonplugin_vimrc
 ln -sf $HOME/dotfiles/.gitconfig $HOME/.gitconfig
+
+if command -v vim &> /dev/null; then
+    vim +PluginInstall +qall
+else
+    echo "Vim not found. Skipping Vim plugin install."
+fi
 
 
 # Cursor user settings (desktop only; only meaningful on the GUI machine)
