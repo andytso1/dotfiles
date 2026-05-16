@@ -25,6 +25,23 @@ else
     echo "Zsh is already installed: $(zsh --version)"
 fi
 
+# Check if tmux is available in the system PATH
+if ! command -v tmux &> /dev/null; then
+    echo "tmux not found. Proceeding with installation..."
+
+    if [ -f /etc/debian_version ]; then
+        $SUDO apt update && $SUDO apt install -y tmux
+    elif [ -f /etc/redhat-release ]; then
+        $SUDO dnf install -y tmux
+    elif [[ "$OSTYPE" == "darwin"* ]]; then
+        brew install tmux
+    else
+        echo "Unsupported OS. Please install tmux manually."
+    fi
+else
+    echo "tmux is already installed: $(tmux -V)"
+fi
+
 # Check if GitHub CLI is available in the system PATH
 if ! command -v gh &> /dev/null; then
     echo "GitHub CLI not found. Proceeding with installation..."
