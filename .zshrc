@@ -55,6 +55,30 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# lazy load nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-. "$HOME/.local/bin/env"
+
+load_nvm() {
+  unset -f nvm node npm npx
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+}
+
+nvm() {
+  load_nvm
+  nvm "$@"
+}
+
+node() {
+  load_nvm
+  node "$@"
+}
+
+npm() {
+  load_nvm
+  npm "$@"
+}
+
+npx() {
+  load_nvm
+  npx "$@"
+}
