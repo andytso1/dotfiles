@@ -37,6 +37,7 @@ fi
 
 
 # do sym links
+ln -sf "$DOTFILES_DIR/.bashrc" "$HOME/.bashrc"
 ln -sf "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
 ln -sf "$DOTFILES_DIR/.p10k.zsh" "$HOME/.p10k.zsh"
 
