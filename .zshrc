@@ -54,6 +54,13 @@ setopt interactive_comments
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 
+# Nsight Systems (nsys) — only add if installed on this machine
+_nsys_linux="/opt/nvidia/nsight-systems/2026.3.1/target-linux-x64"
+[[ -d "$_nsys_linux" ]] && export PATH="$_nsys_linux:$PATH"
+_nsys_mac="/Applications/NVIDIA Nsight Systems.app/Contents/MacOS"
+[[ -d "$_nsys_mac" ]] && export PATH="$_nsys_mac:$PATH"
+unset _nsys_linux _nsys_mac
+
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # lazy load nvm
