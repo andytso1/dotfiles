@@ -31,6 +31,7 @@ alias mv='mv -i'
 alias dc='cd'
 alias szrc='source ~/.zshrc'
 alias jupylab='jupyter-lab'
+command -v batcat >/dev/null && alias bat='batcat'
 
 alias gs='git status'
 alias gb='git branch'
